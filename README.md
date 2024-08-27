@@ -1,8 +1,8 @@
 # install requirements
 sudo apt-get install cmake gcc-arm-none-eabi
+
 # clone repo
 git clone https://github.com/LeVan102/CandleLight_FW.git
-
 cd CandleLight_FW
 
 # create cmake toolchain
@@ -26,6 +26,7 @@ make flash-budgetcan_fw
 sudo nano /etc/network/interfaces.d/can0
 # add 
 # bitrate = bitrate of firmware.
+
 allow-hotplug can0
 iface can0 can static
     bitrate 500000 
